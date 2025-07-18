@@ -69,11 +69,21 @@ class LeaderboardView(discord.ui.View):
             # Update button states
             self.update_button_states()
 
-            await interaction.response.edit_message(embed=embed, view=self)
+            # Use the correct method based on interaction state
+            if interaction.response.is_done():
+                await interaction.edit_original_response(embed=embed, view=self)
+            else:
+                await interaction.response.edit_message(embed=embed, view=self)
 
         except Exception as e:
             logger.error(f"❌ Error updating leaderboard embed: {e}")
-            await interaction.response.send_message("An error occurred while updating the leaderboard.", ephemeral=True)
+            try:
+                if interaction.response.is_done():
+                    await interaction.followup.send("An error occurred while updating the leaderboard.", ephemeral=True)
+                else:
+                    await interaction.response.send_message("An error occurred while updating the leaderboard.", ephemeral=True)
+            except:
+                logger.error("❌ Failed to send error message to user")
 
     def update_button_states(self):
         """Update button enabled/disabled states"""
@@ -168,7 +178,13 @@ class LeaderboardView(discord.ui.View):
                 "An error occurred while retrieving your statistics.",
                 "Please try again later."
             )
-            await interaction.response.send_message(embed=embed, ephemeral=True)
+            try:
+                if interaction.response.is_done():
+                    await interaction.followup.send(embed=embed, ephemeral=True)
+                else:
+                    await interaction.response.send_message(embed=embed, ephemeral=True)
+            except:
+                logger.error("❌ Failed to send error message to user")
 
     @discord.ui.button(label='Next', style=discord.ButtonStyle.secondary, emoji='▶️')
     async def next_page(self, interaction: discord.Interaction, button: discord.ui.Button):
