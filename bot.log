@@ -1,0 +1,57 @@
+2025-07-18 15:12:26,330 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-07-18 15:12:26,331 - bot.role_rewards - INFO - ✅ Role reward manager initialized
+2025-07-18 15:12:26,332 - bot.commands - INFO - ✅ Leaderboard commands registered successfully
+2025-07-18 15:12:26,332 - bot.events - INFO - ✓ Enhanced event handlers registered successfully
+2025-07-18 15:12:26,333 - bot.role_commands - INFO - ✅ Role management commands registered successfully
+2025-07-18 15:12:26,333 - __main__ - INFO - Starting Heavenly Demon Sect Bot...
+2025-07-18 15:12:26,334 - discord.client - INFO - logging in using static token
+2025-07-18 15:12:26,350 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.71:5000
+2025-07-18 15:12:26,350 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-18 15:12:26,662 - werkzeug - INFO - 172.31.128.71 - - [18/Jul/2025 15:12:26] "GET / HTTP/1.1" 200 -
+2025-07-18 15:12:33,054 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: df4cbda67845b9da87f99b6008d0d8c1).
+2025-07-18 15:12:33,054 - bot.events - INFO - ✓ Bot connected to Discord
+2025-07-18 15:12:35,507 - __main__ - INFO - ════════════════════════════════════════
+2025-07-18 15:12:35,507 - __main__ - INFO -   Leaderboard Bot#4539 has connected to Discord!
+2025-07-18 15:12:35,507 - __main__ - INFO -   Connected to 1 guilds
+2025-07-18 15:12:35,507 - __main__ - INFO - ════════════════════════════════════════
+2025-07-18 15:12:35,508 - bot.leaderboard - INFO - 🔗 Connecting to database: dpg-d1r4gibuibrs73f4vpmg-a.oregon-postgres.render.com:None/leaderboarddb_1kn4
+2025-07-18 15:12:40,195 - bot.leaderboard - INFO - ✅ Database tables and indexes created successfully
+2025-07-18 15:12:40,433 - bot.leaderboard - INFO - ✅ Database initialized successfully
+2025-07-18 15:12:40,859 - bot.leaderboard - WARNING - ⚠️ User 793547930552107028 not found in leaderboard for guild 913912273179914261
+2025-07-18 15:12:41,118 - __main__ - INFO - Successfully synced 8 slash commands
+2025-07-18 15:12:41,118 - __main__ - INFO - Initializing leaderboard for guild: Heavenly Demon Sect (1266086795091906664) with 411 total members
+2025-07-18 15:12:41,119 - bot.leaderboard - INFO - 🔄 Initializing leaderboard for guild: Heavenly Demon Sect (ID: 1266086795091906664)
+2025-07-18 15:12:43,221 - bot.leaderboard - INFO - ✅ Updated contribution for [L] AKS Shadow: +20 points (Total: 20)
+2025-07-18 15:12:44,499 - bot.commands - ERROR - ❌ Error in add_points command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-18 15:12:44,822 - bot.events - ERROR - App command error in addpoints: Command 'addpoints' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-18 15:12:44,822 - bot.events - ERROR - Unhandled app command error: CommandInvokeError: Command 'addpoints' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-18 15:12:45,164 - bot.events - ERROR - Failed to send error message: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-18 15:12:45,679 - bot.commands - INFO - ✅ Displayed leaderboard for Lucifer
+2025-07-18 15:15:15,171 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-07-18 15:15:15,171 - bot.role_rewards - INFO - ✅ Role reward manager initialized
+2025-07-18 15:15:15,172 - bot.commands - INFO - ✅ Leaderboard commands registered successfully
+2025-07-18 15:15:15,172 - bot.events - INFO - ✓ Enhanced event handlers registered successfully
+2025-07-18 15:15:15,173 - bot.role_commands - INFO - ✅ Role management commands registered successfully
+2025-07-18 15:15:15,173 - __main__ - INFO - Starting Heavenly Demon Sect Bot...
+2025-07-18 15:15:15,175 - discord.client - INFO - logging in using static token
+2025-07-18 15:15:15,191 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.71:5000
+2025-07-18 15:15:15,191 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-18 15:15:16,129 - werkzeug - INFO - 172.31.128.71 - - [18/Jul/2025 15:15:16] "GET / HTTP/1.1" 200 -
+2025-07-18 15:15:19,377 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 9fa48d1d6b8db50742b1251848e87f3a).
+2025-07-18 15:15:19,377 - bot.events - INFO - ✓ Bot connected to Discord
+2025-07-18 15:15:21,748 - __main__ - INFO - ════════════════════════════════════════
+2025-07-18 15:15:21,748 - __main__ - INFO -   Leaderboard Bot#4539 has connected to Discord!
+2025-07-18 15:15:21,748 - __main__ - INFO -   Connected to 1 guilds
+2025-07-18 15:15:21,748 - __main__ - INFO - ════════════════════════════════════════
+2025-07-18 15:15:21,748 - bot.leaderboard - INFO - 🔗 Connecting to database: dpg-d1r4gibuibrs73f4vpmg-a.oregon-postgres.render.com:None/leaderboarddb_1kn4
+2025-07-18 15:15:26,736 - bot.leaderboard - INFO - ✅ Database tables and indexes created successfully
+2025-07-18 15:15:26,998 - bot.leaderboard - INFO - ✅ Database initialized successfully
+2025-07-18 15:15:27,663 - __main__ - INFO - Successfully synced 8 slash commands
+2025-07-18 15:15:27,663 - __main__ - INFO - Initializing leaderboard for guild: Heavenly Demon Sect (1266086795091906664) with 411 total members
+2025-07-18 15:15:27,664 - bot.leaderboard - INFO - 🔄 Initializing leaderboard for guild: Heavenly Demon Sect (ID: 1266086795091906664)
