@@ -29,6 +29,10 @@ class LeaderboardView(discord.ui.View):
         self.is_active = True
         self.message = None  # Store message reference for auto-updates
 
+        # Set custom_id for persistence (only if guild_id is valid)
+        if guild_id > 0:
+            self.custom_id = f"leaderboard_{guild_id}"
+
         # Add to active views list
         active_leaderboard_views.append(self)
 
@@ -138,7 +142,7 @@ class LeaderboardView(discord.ui.View):
         except Exception as e:
             logger.error(f"❌ Error auto-updating leaderboard: {e}")
 
-    @discord.ui.button(label='Previous', style=discord.ButtonStyle.secondary, emoji='◀️')
+    @discord.ui.button(label='Previous', style=discord.ButtonStyle.secondary, emoji='◀️', custom_id='leaderboard_prev')
     async def previous_page(self, interaction: discord.Interaction, button: discord.ui.Button):
         """Go to previous page"""
         if self.current_page > 1:
@@ -146,7 +150,7 @@ class LeaderboardView(discord.ui.View):
             await self.fetch_leaderboard_data()
             await self.update_embed(interaction)
 
-    @discord.ui.button(label='My Stats', style=discord.ButtonStyle.primary, emoji='📊')
+    @discord.ui.button(label='My Stats', style=discord.ButtonStyle.primary, emoji='📊', custom_id='leaderboard_stats')
     async def my_stats(self, interaction: discord.Interaction, button: discord.ui.Button):
         """Show user's personal statistics with fixed status messages"""
         try:
@@ -186,7 +190,7 @@ class LeaderboardView(discord.ui.View):
             except:
                 logger.error("❌ Failed to send error message to user")
 
-    @discord.ui.button(label='Next', style=discord.ButtonStyle.secondary, emoji='▶️')
+    @discord.ui.button(label='Next', style=discord.ButtonStyle.secondary, emoji='▶️', custom_id='leaderboard_next')
     async def next_page(self, interaction: discord.Interaction, button: discord.ui.Button):
         """Go to next page"""
         if self.current_page < self.total_pages:
