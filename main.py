@@ -115,8 +115,13 @@ async def on_ready():
     # Setup persistent views for leaderboard buttons
     try:
         from bot.commands import LeaderboardView
-        # Add a generic persistent view that will handle all leaderboard interactions
-        bot.add_view(LeaderboardView(0, leaderboard_manager))
+        # Create persistent views for each guild to maintain proper context
+        for guild in bot.guilds:
+            persistent_view = LeaderboardView(guild.id, leaderboard_manager)
+            # Set a custom_id to make the view properly persistent
+            persistent_view.custom_id = f"leaderboard_{guild.id}"
+            bot.add_view(persistent_view)
+            logger.debug(f'✅ Added persistent view for guild {guild.name} ({guild.id})')
         logger.info('✅ Persistent leaderboard views restored')
     except Exception as e:
         logger.error(f'❌ Failed to restore persistent views: {e}')
